@@ -14,3 +14,4 @@ DbMigrator设置为启动项，运行
 创建module文件夹到aspnet-core文件中(应用模块，应用程序？？还不理解)
 -- add-module module --new --add-to-solution-file
 
+添加了一句话
