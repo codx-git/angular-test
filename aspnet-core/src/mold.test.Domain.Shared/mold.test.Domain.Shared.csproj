@@ -17,7 +17,7 @@
     <PackageReference Include="Volo.Abp.FeatureManagement.Domain.Shared" Version="5.0.1" />
     <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Shared" Version="5.0.1" />
     <PackageReference Include="Volo.Abp.SettingManagement.Domain.Shared" Version="5.0.1" />
-  </ItemGroup>
+  <ProjectReference Include="..\..\modules\moduleA\src\moduleA.Domain.Shared\moduleA.Domain.Shared.csproj" /></ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Localization\test\*.json" />
