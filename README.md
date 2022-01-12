@@ -8,7 +8,7 @@ this is a angular study
 第三 ,    DbMigrator设置为启动项，运行.host设置为启动项，运行<br>
 
 
-创建module文件夹到aspnet-core文件中(应用模块，应用程序？？还不理解)
+创建module文件夹到aspnet-core文件中(应用模块，应用程序？？还不理解)<br>
 `add-module module --new --add-to-solution-file`
 
 
