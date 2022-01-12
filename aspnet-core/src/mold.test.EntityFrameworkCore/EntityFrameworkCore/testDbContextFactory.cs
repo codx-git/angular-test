@@ -16,7 +16,7 @@ namespace mold.test.EntityFrameworkCore
             var configuration = BuildConfiguration();
 
             var builder = new DbContextOptionsBuilder<testDbContext>()
-                .UseSqlServer(configuration.GetConnectionString("Default"));
+                .UseMySql(configuration.GetConnectionString("Default"),MySqlServerVersion.LatestSupportedServerVersion);
 
             return new testDbContext(builder.Options);
         }
