@@ -2,8 +2,8 @@
 this is a angular study
 
 
-创建一个新的 abpframew-angular的web应用项目，前端是angular
--- abp new 'yourprojectname' -u angular
+创建一个新的 abpframew-angular的web应用项目，前端是angular\n
+   abp new 'yourprojectname' -u angular\n
 
 通过vs打开aspnet-core项目里的.sln文件
 
@@ -16,8 +16,8 @@ DbMigrator设置为启动项，运行
 
 
 更改为MySQL数据库
-第一 ， .entityframeworkcore.entityframeworkcore把其中所有与SQL sever更改为mysql，下载程序包：volo.abp.entityframeworkcore.mysql，卸载SQL serve版本的
-   https://blog.csdn.net/weixin_42254467/article/details/107443946
+第一 ， .entityframeworkcore.entityframeworkcore把其中所有与SQL sever更改为mysql，下载程序包：volo.abp.entityframeworkcore.mysql，卸载SQL serve版本的\n
+   https://blog.csdn.net/weixin_42254467/article/details/107443946  \n
 第二 ，程序包管理控制器执行add-migration '随便名字'
               再执行 update-databaes '随便名字'
 第三 ，更改appseting.json中的字符集
