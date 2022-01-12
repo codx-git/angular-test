@@ -14,4 +14,12 @@ DbMigrator设置为启动项，运行
 创建module文件夹到aspnet-core文件中(应用模块，应用程序？？还不理解)
 -- add-module module --new --add-to-solution-file
 
-添加了一句话
+
+更改为MySQL数据库
+第一 ， .entityframeworkcore.entityframeworkcore把其中所有与SQL sever更改为mysql，下载程序包：volo.abp.entityframeworkcore.mysql，卸载SQL serve版本的
+   https://blog.csdn.net/weixin_42254467/article/details/107443946
+第二 ，程序包管理控制器执行add-migration '随便名字'
+              再执行 update-databaes '随便名字'
+第三 ，更改appseting.json中的字符集
+第四 , Dbmigration设置为启动项，执行
+第五 ，HttpAPI.host设置为启动项,执行
