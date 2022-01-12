@@ -2,8 +2,8 @@
 this is a angular study
 
 
-创建一个新的 abpframew-angular的web应用项目，前端是angular\n
-   abp new 'yourprojectname' -u angular\n
+创建一个新的 abpframew-angular的web应用项目，前端是angular.
+   abp new 'yourprojectname' -u angular .
 
 通过vs打开aspnet-core项目里的.sln文件
 
