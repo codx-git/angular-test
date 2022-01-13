@@ -15,8 +15,9 @@ this is a angular study
 ## 更改为MySQL数据库<br>
 第一 ， .entityframeworkcore.entityframeworkcore把其中所有与SQL sever更改为mysql，下载程序包：`volo.abp.entityframeworkcore.mysql`，卸载SQL serve版本的<br>
    https://blog.csdn.net/weixin_42254467/article/details/107443946<br>
-第二 ，程序包管理控制器执行`add-migration '随便名字'`
-              再执行` update-databaes '随便名字'`
+第二 ，程序包管理控制器执行，默认项目选择`entityframeworkcore`<br>
+`add-migration '随便名字'`  遇到Build failed的时候重新生成项目<br>
+再执行` update-databaes '随便名字'`<br>
 第三 ，更改appseting.json中的字符集<br>
 第四 , Dbmigration设置为启动项，执行<br>
 第五 ，HttpAPI.host设置为启动项,执行<br>
