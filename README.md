@@ -9,7 +9,8 @@ this is a angular study
 
 
 创建module文件夹到aspnet-core文件中(应用模块，应用程序？？还不理解)<br>
-`add-module module --new --add-to-solution-file`
+`abp add-module module --new --add-to-solution-file`<br>
+https://github.com/antosubash/NewModuleWithTieredAbpApp
 
 
 ## 更改为MySQL数据库<br>
