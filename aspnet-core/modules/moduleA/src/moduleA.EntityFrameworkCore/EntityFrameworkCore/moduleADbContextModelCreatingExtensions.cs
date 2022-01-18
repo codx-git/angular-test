@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Acme.BookStore.Books;
+using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 
 namespace moduleA.EntityFrameworkCore
 {
@@ -29,6 +31,15 @@ namespace moduleA.EntityFrameworkCore
                 b.HasIndex(q => q.CreationTime);
             });
             */
+
+
+            builder.Entity<Book>(b =>
+            {
+                b.ToTable(moduleADbProperties.DbTablePrefix + "Books",
+                    moduleADbProperties.DbSchema);
+                b.ConfigureByConvention(); //auto configure for the base class props
+                b.Property(x => x.Name).IsRequired().HasMaxLength(128);
+            });
         }
     }
 }

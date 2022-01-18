@@ -1,4 +1,6 @@
-﻿using AutoMapper;
+﻿using Acme.BookStore;
+using Acme.BookStore.Books;
+using AutoMapper;
 
 namespace moduleA
 {
@@ -9,6 +11,8 @@ namespace moduleA
             /* You can configure your AutoMapper mapping configuration here.
              * Alternatively, you can split your mapping configurations
              * into multiple profile classes for a better organization. */
+            CreateMap<Book, BookDto>();
+            CreateMap<CreateUpdateBookDto, Book>(MemberList.Source);
         }
     }
 }
