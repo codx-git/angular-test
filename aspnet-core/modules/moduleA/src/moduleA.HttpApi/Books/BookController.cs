@@ -46,9 +46,9 @@ namespace moduleA.Books
 
         [HttpGet]
         [Route("GetList")]
-        public  Task<PagedResultDto<BookDto>> GetListAsync(PagedAndSortedResultRequestDto input)
+        public  async Task<PagedResultDto<BookDto>> GetListAsync(PagedAndSortedResultRequestDto input)
         {
-            return  _bookAppService.GetListAsync(input);
+            return await _bookAppService.GetListAsync(input);
         }
 
         [HttpPut]

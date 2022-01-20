@@ -13,6 +13,9 @@ using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 using moduleA.EntityFrameworkCore;
+using Acme.BookStore.Books;
+using moduleA;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 
 namespace mold.test.EntityFrameworkCore
 {
@@ -48,6 +51,7 @@ namespace mold.test.EntityFrameworkCore
         public DbSet<IdentityLinkUser> LinkUsers { get; set; }
         
         // Tenant Management
+        public DbSet<Book> books { get; set; }
         public DbSet<Tenant> Tenants { get; set; }
         public DbSet<TenantConnectionString> TenantConnectionStrings { get; set; }
 
@@ -83,6 +87,13 @@ namespace mold.test.EntityFrameworkCore
             //    //...
             //});
             builder.ConfiguremoduleA();
+            builder.Entity<Book>(b =>
+            {
+                b.ToTable(moduleADbProperties.DbTablePrefix + "Books",
+                    moduleADbProperties.DbSchema);
+                b.ConfigureByConvention(); //auto configure for the base class props
+                b.Property(x => x.Name).IsRequired().HasMaxLength(128);
+            });
         }
     }
 }
