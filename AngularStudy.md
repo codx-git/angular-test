@@ -20,6 +20,31 @@
  - 使用过滤器：{{e.salay | 过滤器名(也称为管道)}}
 
 # 目录
+* 1. [创建一个自定义组件](#)
+	* 1.1. [创建组件Class ，自定义一个文件如`book.component.ts`](#Classbook.component.ts)
+	* 1.2. [在某个模块中注册组件class，模块文件如：`book.module.ts`中](#classbook.module.ts)
+	* 1.3. [使用已经注册过的组件，如：在`book.component.html`中使用`<app-book>...XX..</app-book>`<br>](#book.component.htmlapp-book...XX..app-bookbr)
+	* 1.4. [$\color{red}{Angular CLI 提供快速创建组件的工具}$ <br>](#colorredAngularCLIbr)
+* 2. [数据绑定](#-1)
+	* 2.1. [简单的绑定](#-1)
+		* 2.1.1. [初始化内容](#-1)
+		* 2.1.2. [$\color{red}{HTML绑定}$<br>](#colorredHTMLbr)
+		* 2.1.3. [$\color{red}{属性绑定}$<br>](#colorredbr)
+		* 2.1.4. [$\color{red}{事件绑定}$<br>](#colorredbr-1)
+	* 2.2. [Angular中的指令系统](#Angular)
+		* 2.2.1. [Angular中的指令分为三类:](#Angular:)
+		* 2.2.2. [循环绑定：*ngForof<br>](#ngForofbr)
+		* 2.2.3. [选择绑定：*ngIf<br>](#ngIfbr)
+		* 2.2.4. [样式绑定：[ngStyle]<br>](#ngStylebr)
+		* 2.2.5. [样式绑定：[ngClass]<br>](#ngClassbr)
+		* 2.2.6. [了解：特殊选择绑定:[ngSwitch]<br>](#:ngSwitchbr)
+		* 2.2.7. [$\color{red}{双向数据绑定指令：[(ngModule)]  — 重点}$ <br>](#colorredngModulebr)
+		* 2.2.8. [扩展知识：如何自定义指令<br>](#br)
+* 3. [自定义管道（过滤器）](#-1)
+	* 3.1. [练习：<br>](#br-1)
+		* 3.1.1. [实现添加、删除事件](#-1)
+		* 3.1.2. [创建员工列表数组<br>](#br-1)
+	* 3.2. [创建对象的两种方式<br>](#br-1)
 
 # 内容
 ##  1. <a name=''></a>创建一个自定义组件
@@ -54,7 +79,7 @@
 
 ##  2. <a name='-1'></a>数据绑定
 ###  2.1. <a name='-1'></a>简单的绑定
-####  2.1.1. <a name='book.component.ts'></a>初始化内容
+####  2.1.1. <a name='-1'></a>初始化内容
 ```typescript
         //在`book.component.ts`中
        export class bookComponent{
@@ -222,7 +247,7 @@
     //.html文件中引用
     <p appDirect>...</p>
 ```
-#### 自定义管道（过滤器）
+##  3. <a name='-1'></a>自定义管道（过滤器）
 - 创建管道class，实现转换功能
 - 在模块中注册管道
 - 在模板视图中使用管道
@@ -257,8 +282,8 @@
     <p> {{e.sex | sex }} </p>
     <p [title]="empSex | sex"></p>
 ```
-####  2.2.9. <a name='br-1'></a>练习：<br>
-##### 实现添加、删除事件
+###  3.1. <a name='br-1'></a>练习：<br>
+####  3.1.1. <a name='-1'></a>实现添加、删除事件
 ```typescript
     //在.component.ts文件中
     todolist=['Study','Work','Play']
@@ -288,7 +313,7 @@
         </li>
     </ul> 
 ```
-##### 创建员工列表数组<br>
+####  3.1.2. <a name='br-1'></a>创建员工列表数组<br>
 ```typescript
     //在.component.ts文件添加内容和函数
     emplist=  [{eid:101,ename:"Zhang",sex:1,salay:5000},
@@ -299,7 +324,7 @@
         this.emplist.splice(index,1)
     }
 
-    //在.html实现内容,其中sex为2.2.9中的自定义管道
+    //在.html实现内容,其中sex为自定义管道
     <table border="1" [width]="100">
     <tbody>
         <tr *ngIf="emplist.length==0" >
@@ -323,3 +348,5 @@
     </tbody>
 </table>
 ```
+###  3.2. <a name='br-1'></a>创建对象的两种方式<br>
+- 方式1：手工创建式 
